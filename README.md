@@ -1,3 +1,3 @@
-# Quoterism
+# Quoterism Raycast Extension
 
-Get access to the Web's largest collection of human inspiration
+Raycast Extension to get access to [Quoterism](https://www.quoterism.com)
