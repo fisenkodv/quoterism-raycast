@@ -28,27 +28,15 @@ export default function Command() {
           </ActionPanel>
         }
       />
-
-      <List.Section title="Mode Information">
-        <List.Item
-          title="About"
-          icon={Icon.Link}
-          actions={
-            <ActionPanel>
-              <Action.OpenInBrowser url={"https://www.quoterism.com/about"} />
-            </ActionPanel>
-          }
-        />
-        <List.Item
-          title="Authors Catalog"
-          icon={Icon.Link}
-          actions={
-            <ActionPanel>
-              <Action.OpenInBrowser url="https://www.quoterism.com/authors" />
-            </ActionPanel>
-          }
-        />
-      </List.Section>
+      <List.Item
+        title="Read More Quotes"
+        icon={Icon.Link}
+        actions={
+          <ActionPanel>
+            <Action.OpenInBrowser url="https://www.quoterism.com/" />
+          </ActionPanel>
+        }
+      />
     </List>
   );
 }

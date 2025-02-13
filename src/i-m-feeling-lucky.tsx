@@ -7,10 +7,13 @@ export default function ImFillingLycky() {
   const { pop } = useNavigation();
   const { isLoading, data, revalidate } = useFetch<Quote>("https://www.quoterism.com/api/quotes/random");
 
-  const getMarkdown = (quote: Quote) => `
-  # ${quote.author.name}
-  _${quote.text}_
-`;
+  const getMarkdown = (quote?: Quote) =>
+    quote
+      ? `
+# ${quote.author.name}
+_${quote.text}_
+`
+      : "";
 
   return (
     <Detail

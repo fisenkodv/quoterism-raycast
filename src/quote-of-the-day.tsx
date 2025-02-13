@@ -7,15 +7,18 @@ export default function QuoteOfTheDay() {
   const { pop } = useNavigation();
   const { isLoading, data } = useFetch<Quote>("https://www.quoterism.com/api/quotes/quote-of-the-day");
 
-  const getMarkdown = (quote: Quote) => `
-  # ${quote.author.name}
-  _${quote.text}_
-`;
+  const getMarkdown = (quote?: Quote) =>
+    quote
+      ? `
+# ${quote.author.name}
+_${quote.text}_
+`
+      : "";
 
   return (
     <Detail
       isLoading={isLoading}
-      markdown={getMarkdown(data!)}
+      markdown={getMarkdown(data)}
       actions={
         <ActionPanel>
           <Action title="Back" icon={Icon.ArrowLeft} onAction={pop} />
